@@ -1,0 +1,127 @@
+There are other service which we just need to know high level for practitioner exam
+
+Below are AWS detective avaialable services
+---------------------------------------
+AWS Web Application Firewall (WAF)
+---------------------------------------
+    -> As this service will listen to the incomeing(anyone trying to hit our web page) web application http calls and try to detect any vulnerble activity is occuring.
+    -> TO work with WAF we need to write configs
+    -> In WAF we call as Web ACL(Web Access Control List) where we can write the config
+    Web ACL
+        -> It has three component to specify the config
+        -> 1. Resource(Which service does web application is hosted it may be other cloud serives like azure or gcp ) to monitor
+        -> 2. Rules -> we need to list the vulnerble activity over here so it will test based on this list.
+        -> Action -> what action to do based on the config
+            ->  Allow,Block,Count and Captcha
+
+---------------------------------------
+AWS Shield
+---------------------------------------
+    -> This service is used to control most common actividty called DDos.
+    -> Where DDos means too many times hitting the server and making to unavailable
+    -> So AWS Shield will detect attack like DDos and mitigates(making less) the attacks.
+
+---------------------------------------
+AWS Network Firewall
+---------------------------------------
+    -> In AWS we have VPC (Virtual private cloud).
+    -> To manage this VPC in terms what traffic is allowed and leave where the AWS Network Firewall is used.
+
+---------------------------------------
+AWS Inspector
+---------------------------------------
+    -> IT will scans the services like ec2,ecr and lambda services to find any vulnerble acctivites if found
+    -> This inspector defaulty work in the ec2,ecr and lambda
+    -> When the inspector founds the vulnerble it will generate the report with findings
+    -> It will automatically re run when ever there is new change on it.
+
+---------------------------------------
+AWS GuardDuty
+---------------------------------------
+    -> THis services is used to monitor the aws account.
+    -> It is very inteligence guard whre it uses machine learning and other strong detection to identoty the any annonimis activity within aws account is happening
+    -> So any unusual activities any random logins any potential unauthorized deployments like this something is noted means AWS GuardDuty will take action and notify the root user.
+---------------------------------------
+AWS Detective
+---------------------------------------
+    -> It collect the data from the VPC log, CloudTrail log and GuardDuty findingds.
+    -> Detective use  this data and use machine learning and statistical analtic to create the advanced visualization that shows resource behaviours and interactions over time.
+
+---------------------------------------
+AWS Config
+---------------------------------------
+    -> THe AWS config tracks and audits the configuration of AWS resources over time
+    -> What ever changes and setting we do for any service in AWS will be tracked over here
+
+---------------------------------------
+AWS Security Hub
+---------------------------------------
+    -> AWS security Hub will have the details of AWS Inpector and GuradDuty.
+    -> So dont have to go and check two service instead we can check the secuirty hub for monitoring.
+    -> Also we can automate the seciruty checks by connecting with the other services ec2,dynamoDB etc for maintiang the secuirty checks
+
+---------------------------------------
+AWS CloudTrail
+---------------------------------------
+    -> It tracks the user activity within the account level.
+    -> ANytime the user perform the action within the AWS an event is triggers and it have been noted by the CloudTrail
+    Ex: Who logging in?
+        Who is done this setting in theis service
+        etc
+    -> It also tracks console,sdk and command line in three format aswell
+
+---------------------------------------
+AWS SecuirtyLake
+---------------------------------------
+    -> In this we can track the other source , cloud provider (Azure,gcp) and maintaining the logs in the central location.
+    -> AFter collecting all the sources it will convert those data into query efficent format.
+    -> For users to queyr the data and do the actions as per needs.
+
+---------------------------------------
+AWS Macie
+---------------------------------------
+    -> Macie uses the pattern of machine learning and matching to automaticlly discover sensitive data.
+    -> Macie will generate an inventory reports of s3 buckets and scan object wheahter it has sensitive data. Make nortify to protect it safe.
+
+Below are AWS managemenrt related security services.
+
+---------------------------------------
+AWS Firewall manager
+---------------------------------------
+    -> Imagine we have configured the aws secuirty service like shield,waf,network firewall. for the dev environment
+    -> same setting now we want to qa or prod environment means we need to do samething what done in dev env need to do in prod also
+    -> To fix this we have AWS Firewall Manager.
+    -> We can group it and use ever here we want.
+
+---------------------------------------
+AWS Cognito
+---------------------------------------
+    -> It helps to implement the login and signup function for mobile and web applications
+    -> Congito itself manage all the user crendtials
+    -> Esay to get user  autentication in our apppluication
+
+---------------------------------------
+AWS Secret Manager
+---------------------------------------
+    -> This service is use for stroing the application crentials like database username/passwrod or any pther 3rd party auth keys.
+    -> We can store into this secret manager and when ever we need we can pull from this serives
+    -> It has lot of feature to long term passwrdo change and much more.
+
+---------------------------------------
+AWS Certificate manager
+---------------------------------------
+    -> This handles all the aws web or service public and private certifactes in one place.
+
+---------------------------------------
+Key management service
+---------------------------------------
+    -> This tool manage the encrypting like if you want to store the essentail file dont want to be plain content.
+    -> We can use KMS.
+    -> We can maintain the keys over to here to encrpt by using the key we can decrupt as well.
+
+---------------------------------------
+CloudHSM
+---------------------------------------
+    -> This is used for storin the keys.
+    -> If you want to encrpt and decrupt from you different different service.
+    -> From the consuking server we need to send request to the HSM t  

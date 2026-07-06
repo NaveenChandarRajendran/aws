@@ -1,0 +1,13 @@
+Organistaion
+    -> It is the service where the AWS is provide to use for account level.
+    Ex: If we have the three different account to maintain that will be diffecult like maintaining bill for all three accounts etc.
+    -> To maintain the account level the organistaion is used.
+    -> Like how IAM is for user level and organisation is for account level.
+
+
+Service Control Policies
+    -> Account level maintaining the access of aws services permission.
+
+Organisation Unit
+    -> If one are two accounts has  samekind of configure and service control policies means, we can create one oragnisation and delare the service control policies and link to the other accounts aswell
+    -> How group is working in the IAM users concept.    

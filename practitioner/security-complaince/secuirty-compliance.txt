@@ -1,0 +1,11 @@
+Compliance
+    -> It is set of instruction or guideliness that must be follow to obtain the best practice.
+
+AWS Artifact
+    -> AWS compliance  reports can be accessed on demand from AWS Artifact.
+
+AWS Compliance center
+    -> The AWS Compliance center is central location to reasearch cloud related regulatory requirements and how they impact your industry
+
+AWS Audit Manager
+    -> It continuous collect data from the services which we use to prepare the audit and ensure that you acheving the compliance with regular standards.

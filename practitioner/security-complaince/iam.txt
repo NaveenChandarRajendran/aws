@@ -1,0 +1,19 @@
+IAM in AWS is Identify Access Management
+
+    -> On creating first user the AWS will provide us root user as default.
+    -> root user has all permission in the aws it act as admin role.
+    -> If new employee/member is come means for that person we can create the user and can give the permission what they can access.
+    -> that new user is restricted for any action by default.
+    -> To give access we need to write the policy for that.
+
+Iam policy
+The structure of iam policy would be
+    -> version
+    -> statment array of item which will contain one by one statement
+    -> sid -> its optional key where we can provide and description about it.
+    -> Effect -> "Allow" or "deny" which tell about action needs to do.
+    -> Action -> items are action which the user can perform.
+    -> Resource -> Reosurce whre this action will be eligible
+
+Groups:
+    -> Suppose we need to create an user but that user exactly has the same policy means in common we can create one group and within that group we can define the policy and add users in that group.

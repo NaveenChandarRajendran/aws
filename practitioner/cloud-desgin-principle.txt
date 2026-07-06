@@ -1,0 +1,10 @@
+-> Design of failure
+    We should always think what if some service fail what backup needs to take care.
+-> DEcouple components
+    Avoid tight coupling. meaning depedent of one service is compulsory to make the job done
+-> Implement elasticity
+    Make sure your application and all its
+    components can scale up and down
+    as load varies
+-> Think parellel
+    Always think other side how we can optimize some service to bring the better performance to the table.
