@@ -67,3 +67,10 @@ like stage,production(env) by default vpc wont comuication each other you cant a
 - SO the diff between NAT and IG is the **IG allows either side to initiare the connection but NAT ecpevts the connection from the resouces to internet alone**
 
 
+## How it works
+
+- Any public subnets which has the IG access is the public subnet can comuincate to internet
+- But if you want to use NAT you still need an internet gateway,but what is happening is **you will be deploying the NAT Gateway to public subnet** which is going to give access to the IG.
+- And your private subnet anyhting wants to commicate to internet, the send the request to the NAt gateway, That NAt gatewayt send request to the IGand the request will go out to intenet and you will get the response in opposite direction.
+
+> **Note:** If you going to use Nat gatway still you need internet gateway to commicate the internet..
